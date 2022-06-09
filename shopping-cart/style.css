@@ -47,6 +47,18 @@ body{
     justify-content: center;
 }
 
+@media (max-width: 1000px){
+    .shop {
+        grid-template-columns: repeat(2, 223px);
+    }
+}
+
+@media (max-width: 500px){
+    .shop {
+        grid-template-columns: repeat(1, 223px);
+    }
+}
+
 .item{
     border: 2px solid #C492B1;
     border-radius: 4px;
