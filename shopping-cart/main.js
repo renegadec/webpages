@@ -2,34 +2,36 @@ let shop = document.getElementById('shop');
 
 let shopItemsData = [
     {
-        id: "001",
+    id: "jfhgbvnscs",
         name: "Casual Shirt",
         price: 45,
-        desc: "Lorem ipsum dolor, sit amet consectetur adipisicing.",
-        img: "images/img-1.jpg"
+        desc: "Lorem ipsum dolor sit amet consectetur adipisicing.",
+        img: "images/img-1.jpg",
     },
     {
-        id: "002",
-        name: "Shirt's & Tie",
-        price: 65,
-        desc: "Lorem ipsum dolor, sit amet consectetur adipisicing.",
-        img: "images/img-2.jpg"
+        id: "ioytrhndcv",
+        name: "Office Shirt",
+        price: 100,
+        desc: "Lorem ipsum dolor sit amet consectetur adipisicing.",
+        img: "images/img-2.jpg",
     },
     {
-        id: "003",
+        id: "wuefbncxbsn",
         name: "T Shirt",
         price: 25,
-        desc: "Lorem ipsum dolor, sit amet consectetur adipisicing.",
-        img: "images/img-3.jpg"
+        desc: "Lorem ipsum dolor sit amet consectetur adipisicing.",
+        img: "images/img-3.jpg",
     },
     {
-        id: "004",
-        name: "Men's Suit",
-        price: 130,
-        desc: "Lorem ipsum dolor, sit amet consectetur adipisicing.",
-        img: "images/img-4.jpg"
-    }
+        id: "thyfhcbcv",
+        name: "Mens Suit",
+        price: 300,
+        desc: "Lorem ipsum dolor sit amet consectetur adipisicing.",
+        img: "images/img-4.jpg",
+    },
 ];
+
+let basket = []
 
 let generateShop = () => {
     return (shop.innerHTML= shopItemsData.map((item) => {
@@ -42,9 +44,9 @@ let generateShop = () => {
                             <div class="price-quantity">
                                 <h2>$ ${price}</h2>
                                 <div class="buttons">
-                                    <i onclick="decrement()" class="bi bi-dash-lg"></i>
+                                    <i onclick = "decrement(${id})" class="bi bi-dash-lg"></i>
                                     <div id=${id} class="quantity">0</div>
-                                    <i class="bi bi-plus-lg"></i>
+                                    <i onclick = "increment(${id})" class="bi bi-plus-lg"></i>
                                 </div>
                             </div>
                         </div>
@@ -56,6 +58,40 @@ let generateShop = () => {
 
 generateShop();
 
-let increment = () => {};
-let decrement = () => {};
-let update = () => {};
+let increment = (id) => {
+    let selectedItem = id;
+    let search = basket.find((x) => x.id === selectedItem.id);
+
+    if (search === undefined){
+        basket.push({
+            id: selectedItem.id,
+            item: 1,
+        });
+    }
+    else {
+        search.item += 1
+    }
+
+    update(selectedItem.id);
+};
+
+let decrement = (id) => {
+    let selectedItem = id;
+    let search = basket.find((x) => x.id === selectedItem.id);
+
+    if (search === undefined ) return;
+    else if (search.item === 0){
+        return;
+    } 
+
+    else {
+        search.item -= 1;
+    }
+
+    update(selectedItem.id);
+};
+
+let update = (id) => {
+    let search = basket.find((x) => x.id === id);
+    document.getElementById(id).innerHTML = search.item;
+};
