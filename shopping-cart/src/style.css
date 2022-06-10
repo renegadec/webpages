@@ -11,6 +11,12 @@ body{
 i {
     cursor: pointer;
 }
+
+a {
+    text-decoration: none;
+    color: white;
+}
+
 .navbar {
     display: flex;
     flex-direction: row;
@@ -93,4 +99,12 @@ i {
 
 .bi-plus-lg {
     color: green;
+}
+
+/* 
+!style rules for label and some buttons
+*/
+
+.text-center {
+    
 }
