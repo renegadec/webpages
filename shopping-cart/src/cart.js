@@ -1,5 +1,5 @@
-let label = document.getElementById('label')
-let ShoppingCart = document.getElementById('shopping-cart')
+let label = document.getElementById("label")
+let ShoppingCart = document.getElementById("shopping-cart")
 
 let basket = JSON.parse(localStorage.getItem("data")) || [];
 
@@ -12,15 +12,16 @@ calculation();
 
 let generateCartItems = () => {
     if (basket.length !== 0){
-
+        
     }
     else {
         ShoppingCart.innerHTML = ``;
         label.innerHTML = `
-        <h2>Cart is Empty</h2>
-        <a href="index.html">
-            <button class="HomeBtn">Back to Home</button>
-        </a>
-        `;
+                        <h2>Cart is Empty</h2>
+                        <a href="index.html">
+                            <button class="HomeBtn">Back to Home</button>
+                        </a>`;
     }
 };
+
+generateCartItems();
