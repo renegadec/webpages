@@ -233,9 +233,8 @@ a {
     text-align: center;
 }
 
-.social-icons img {
-    width: 30px;
-    margin: 0 12px;
+.social-icons i {
+    margin: 0 20px;
     box-shadow: 0 0 20px 0 #C492B1;
     cursor: pointer;
     border-radius: 50%;

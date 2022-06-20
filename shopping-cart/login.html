@@ -24,9 +24,9 @@
                 <button type="button" class="toggle-btn" onclick="register()">Register</button>
             </div>
             <div class="social-icons">
-                <img src="images/fb.png" alt="facebook">
-                <img src="images/tw.png" alt="twitter">
-                <img src="images/gp.png" alt="google">
+                <i class="bi bi-facebook"></i>
+                <i class="bi bi-twitter"></i>
+                <i class="bi bi-google"></i>
             </div>
             <form action="" method="GET" id="login" class="input-group">
                 <input type="text" id="name" class="input-field" placeholder="Username" required>
@@ -34,11 +34,12 @@
                 <input type="checkbox" class="check-box"><span>Remember Password</span>
                 <button type="submit" class="submit-btn">Login</button>
             </form>
-            <form id="register" class="input-group">
-                <input type="text" class="input-field" placeholder="Username" required>
-                <input type="email" class="input-field" placeholder="Email Address" required>
-                <input type="password" class="input-field" placeholder="Password" required>
-                <input type="checkbox" class="check-box"><span>I agree to terms & conditions</span>
+            <form action="" method="GET" id="register" class="input-group">
+                <input type="text" id="reg_name" class="input-field" placeholder="Username" required>
+                <input type="email" id="email" class="input-field" placeholder="Email Address" required>
+                <input type="password" id="reg_password" class="input-field" placeholder="Password" onkeyup="check()" required>
+                <input type="password" id="confirm_password" class="input-field" placeholder="Confirm Password" onkeyup="check()" required><span id="pass_match"></span>
+                <input type="checkbox" id="check-box" class="check-box"><span>I agree to terms & conditions</span>
                 <button type="submit" class="submit-btn">Register</button>
             </form>
         </div>
