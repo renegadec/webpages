@@ -3,26 +3,6 @@ let shop = document.getElementById('shop');
 
 let basket = JSON.parse(localStorage.getItem("data")) || []
 
-// ! Login Page 
-
-const log_in = document.getElementById('login');
-const reg = document.getElementById('register');
-const btn = document.getElementById('btn');
-
-function register() {
-    log_in.style.left = "-400px";
-    reg.style.left = "50px";
-    btn.style.left = "110px";
-}
-
-function login() {
-    log_in.style.left = "50px";
-    reg.style.left = "450px";
-    btn.style.left = "0";
-}
-
-
-
 let generateShop = () => {
     return (shop.innerHTML= shopItemsData.map((item) => {
         let {id, name, price, desc, img} = item;

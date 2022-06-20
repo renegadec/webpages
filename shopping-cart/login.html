@@ -14,15 +14,10 @@
         <a href="index.html">
             <h2>Clothing Store</h2>
         </a>
-        <!-- <a href="cart.html">
-            <div class="cart">
-                <i class="bi bi-cart"></i>
-                <div id="cartAmount" class="cartAmount">0</div>
-            </div>
-        </a> -->
     </div>
     <div class="hero">
         <div class="form-box">
+            <div id="error"></div>
             <div class="button-box">
                 <div id="btn"></div>
                 <button type="button" class="toggle-btn" onclick="login()">Log In</button>
@@ -33,21 +28,21 @@
                 <img src="images/tw.png" alt="twitter">
                 <img src="images/gp.png" alt="google">
             </div>
-            <form id="login" class="input-group">
-                <input type="text" class="input-field" placeholder="Username" required>
-                <input type="text" class="input-field" placeholder="Password" required>
+            <form action="" method="GET" id="login" class="input-group">
+                <input type="text" id="name" class="input-field" placeholder="Username" required>
+                <input type="password" id="password" class="input-field" placeholder="Password" required>
                 <input type="checkbox" class="check-box"><span>Remember Password</span>
                 <button type="submit" class="submit-btn">Login</button>
             </form>
             <form id="register" class="input-group">
                 <input type="text" class="input-field" placeholder="Username" required>
                 <input type="email" class="input-field" placeholder="Email Address" required>
-                <input type="text" class="input-field" placeholder="Password" required>
+                <input type="password" class="input-field" placeholder="Password" required>
                 <input type="checkbox" class="check-box"><span>I agree to terms & conditions</span>
                 <button type="submit" class="submit-btn">Register</button>
             </form>
         </div>
     </div>
 </body>
-<script src="src/main.js"></script>
+<script src="src/login.js"></script>
 </html>
