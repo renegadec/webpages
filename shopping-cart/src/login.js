@@ -55,8 +55,6 @@ reg.addEventListener('submit', (e) => {
         e.preventDefault()
         errorMessage.innerText = messages.join(', ')
     }
-
-    db.run("INSERT INTO users (username, email, password) VALUES ($reg_name, $user_email, $reg_password)");
 })
 
 
