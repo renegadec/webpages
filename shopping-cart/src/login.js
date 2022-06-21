@@ -85,7 +85,7 @@ log_in.addEventListener('submit', (e) => {
 var check = function() {
     if(reg_password.value !== confirm_password.value) {
         pass_match.style.color = 'red';
-        pass_match.innerHTML = 'not matching'
+        pass_match.innerHTML = 'password not matching'
     }
     else {
         pass_match.style.color = 'green';
