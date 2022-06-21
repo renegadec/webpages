@@ -6,11 +6,13 @@ const btn = document.getElementById('btn');
 
 const user_name = document.getElementById('name');
 const reg_name = document.getElementById('reg_name');
+const user_email = document.getElementById('email');
 const password = document.getElementById('password');
 const reg_password = document.getElementById('reg_password');
 const confirm_password = document.getElementById('confirm_password')
 const errorMessage = document.getElementById('error');
 const pass_match = document.getElementById('pass_match');
+
 
 let register = () => {
     log_in.style.left = "-400px";
@@ -29,12 +31,12 @@ let login = () => {
 reg.addEventListener('submit', (e) => {
     let messages = [];
 
-    // if (reg_password.value !== confirm_password.value){
-    //     messages.push('Password doesnt match')
-    // }
-
     if (reg_name.value === '' || reg_name.value == null) {
         messages.push('Name is required')
+    }
+
+    if (reg_name.value.length < 5) {
+        messages.push('Username should be more than 4 characters')
     }
 
     if (reg_password.value.length <= 6) {
@@ -53,6 +55,8 @@ reg.addEventListener('submit', (e) => {
         e.preventDefault()
         errorMessage.innerText = messages.join(', ')
     }
+
+    db.run("INSERT INTO users (username, email, password) VALUES ($reg_name, $user_email, $reg_password)");
 })
 
 
