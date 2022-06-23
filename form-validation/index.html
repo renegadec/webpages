@@ -11,7 +11,42 @@
     <title>Form Validation</title>
 </head>
 <body>
-    
+    <div class="container">
+        <form id="form">
+            <div class="title">Get Started</div>
+            <!-- ? user name input field -->
+
+            <div>
+                <label for="username">Username</label>
+                <i class="fa-solid fa-user"></i>
+                <input type="text" name="username" id="username">
+                <i class="fa-solid fa-circle-exclamation"></i>
+                <i class="fa-solid fa-circle-check"></i>
+                <div class="error"></div>
+            </div>
+            <!-- ? email input field -->
+            <div>
+                <label for="email">Email</label>
+                <i class="fa-solid fa-envelope"></i>
+                <input type="email" name="email" id="email">
+                <i class="fa-solid fa-circle-exclamation"></i>
+                <i class="fa-solid fa-circle-check"></i>
+                <div class="error"></div>
+            </div>
+            <!-- ? user name input field -->
+            <div>
+                <label for="password">Password</label>
+                <i class="fa-solid fa-lock"></i>
+                <input type="password" name="password" id="password">
+                <i class="fa-solid fa-circle-exclamation"></i>
+                <i class="fa-solid fa-circle-check"></i>
+                <div class="error"></div>
+            </div>
+
+            <!-- ? submit button -->
+            <button type="submit" id="submit">Submit</button>
+        </form>
+    </div>
 </body>
 <script src="main.js"></script>
 </html>
