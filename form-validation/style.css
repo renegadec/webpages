@@ -51,7 +51,7 @@ input:focus {
 
 form div i {
     position: absolute;
-    padding: 10px;
+    padding: 12px;
 }
 
 .failure-icon, .success-icon {
